@@ -1,0 +1,50 @@
+<p>tree works!</p>
+
+<p *appNot="!cond"> A => This paragraph is displayed because the condition is true.  </p>
+
+<div *appNot="!cond">
+    <p>{{ rawNode.info}}</p>
+    <div id="tree">
+    <nodes [node]="rawNode"></nodes>
+    </div>
+</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="nodeValue">
+        NodeValue:
+      </label>
+      <input id="nodeValue" type="number" formControlName="nodeValue">
+    </div>
+  
+   
+   
+    <button class="button" type="submit">Purchase</button>
+  
+  </form>
+
+
+
+
+
+
+<!--
+<ng-container *ngTemplateOutlet="tree; context: {rawNode : rawNode}"> </ng-container>
+
+
+<ng-template #tree let-rawNode="rawNode">
+    <div *appNode="rawNode"> 
+        <p>{{ rawNode.info }} </p>
+        
+        <div *ngIf="rawNode.leftLink" >
+            <div>{{rawNode.leftLink.info}}</div>
+            <ng-container *ngTemplateOutlet="tree; context: {rawNode : rawNode.leftLink}"> </ng-container>
+        </div>
+        
+    </div>
+</ng-template>
+-->
+
+
+
+

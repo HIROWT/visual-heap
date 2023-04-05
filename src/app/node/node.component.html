@@ -1,0 +1,15 @@
+<div >
+    <ul>
+    <li>
+        <nodes [node]="node.rightlink" *ngIf="node.rightlink"></nodes>
+    </li>
+     <li>
+        
+        {{node.info}}
+       
+     </li>
+     <li>
+        <nodes [node]="node.leftlink" *ngIf="node.leftlink"></nodes>
+     </li>
+    </ul>
+  </div>
